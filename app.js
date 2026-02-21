@@ -48,7 +48,8 @@ app.use('/assignments', assignmentsRoutes);
 app.use('/admin', adminRoutes);
 app.use('/api', apiRoutes);
 
-// Ruta raíz
+
+// Ruta principal
 app.get('/', (req, res) => {
   if (!req.session.user) return res.redirect('/login');
   return res.redirect('/dashboard');
@@ -57,8 +58,4 @@ app.get('/', (req, res) => {
 // 404
 app.use((req, res) => {
   res.status(404).render('404');
-});
-
-app.listen(PORT, () => {
-  console.log(`EduCare Pro corriendo en http://localhost:${PORT}`);
 });
