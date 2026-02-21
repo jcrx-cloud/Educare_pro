@@ -1,0 +1,11 @@
+<%- include('partials/_head', { title: 'Dashboard' }) %>
+
+<div class="container mt-5">
+  <h1 class="text-center">Bienvenido <%= user.role %></h1>
+  <p class="text-center">Correo: <%= user.email %></p>
+  <div class="text-center mt-4">
+    <a href="/logout" class="btn btn-danger">Cerrar sesión</a>
+  </div>
+</div>
+
+<%- include('partials/_foot') %>
